@@ -1,0 +1,870 @@
+/* ヘッダー */
+header {
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  background-color: #ffffff;
+  padding-top: 50px;
+  padding-left: 40px;
+}
+.logo-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.logo-box img {
+  width: 60px;
+}
+.logo-box p {
+  font-weight: 500;
+  font-size: 17px;
+}
+.nav-list li {
+  list-style: none;
+  padding: 13px 0;
+}
+.nav-list li:nth-of-type(6) {
+  margin-bottom: 30px;
+}
+.nav-list a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  cursor: pointer;
+}
+.container {
+  position: relative;
+  max-width: 100%;
+  margin-left: 300px;
+}
+
+/* ハンバーガー */
+.hamburger_menu {
+  display: none;
+}
+
+/* ビデオ */
+#video {
+  position: fixed;
+  overflow: hidden;
+}
+#video video {
+  min-height: 100%;
+  min-height: 100vh;
+  min-width: 100%;
+  min-width: 100vw;
+}
+.main-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+.space {
+  width: 100%;
+  height: 100vh;
+}
+/* 建築 */
+.architecture {
+  position: relative;
+  z-index: -1;
+  padding: 0 10%;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+}
+.architecture h1::before,
+.architecture h1::after {
+  border-top: 1px solid blanchedalmond;
+  content: "";
+  width: 25%;
+  display: block;
+}
+.architecture h1 {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.image-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 80px;
+}
+
+/* ここできてません */
+.image-box li {
+  position: relative;
+  margin-bottom: 50px;
+  cursor: pointer;
+  border: 1px white solid;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, 0.5) inset;
+}
+.image-box li::after {
+  position: absolute;
+  content: "PROJECT_01";
+  color: #ffffff;
+  font-size: 10px;
+  left: 5px;
+  bottom: 5px;
+}
+
+.image-box img {
+  position: relative;
+  width: 400px;
+  z-index: -1;
+}
+
+/* house  */
+.house {
+  padding: 0 10% 100px;
+  background-color: black;
+  opacity: 0.8;
+}
+.house h2::before,
+.house h2::after {
+  border-top: 1px solid blanchedalmond;
+  content: "";
+  width: 25%;
+  display: block;
+}
+.house h2 {
+  height: 100px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.circle-box {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  text-align: center;
+}
+.circle-box div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 17vw;
+  height: 17vw;
+  border: 1px solid white;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.circle-box div::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 17vw;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: all 0.6s;
+  left: 0;
+}
+.circle-box div:hover::before {
+  width: 17vw;
+}
+.circle-box p {
+  padding: 10px 0;
+}
+
+.flow {
+  padding: 0 10% 100px;
+  background-color: #ffffff;
+}
+.flow h3::before,
+.flow h3::after {
+  border-top: 1px solid black;
+  content: "";
+  width: 25%;
+  display: block;
+}
+.flow h3 {
+  height: 100px;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.flow > p {
+  margin-bottom: 50px;
+}
+.flow-box-wrap {
+  display: flex;
+}
+.flow-right-wrap {
+  display: flex;
+  margin-bottom: 60px;
+}
+.flow-box {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+.flow-left-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  width: 100%;
+  min-width: 200px;
+  height: 80px;
+  background-color: #414141;
+  color: white;
+  margin-bottom: 80px;
+}
+.flow-left-box::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0px;
+  top: 80px;
+  border-top: 50px solid #414141;
+  border-right: 100px solid transparent;
+  border-left: 100px solid transparent;
+  z-index: 2;
+}
+.flow-left-box::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 80px;
+  top: 80px;
+  background-color: #ffdd02;
+  z-index: 1;
+}
+
+.flow-middle-box p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 30px;
+  height: 30px;
+  background-color: #414141;
+  border-radius: 50%;
+}
+.flow-right-box p:first-child {
+  font-size: 25px;
+  width: 100%;
+  border-bottom: 1px solid black;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.flow-right-box p:last-child {
+  font-size: 18px;
+}
+#none::after {
+  display: none;
+}
+/* お問い合わせ */
+.question {
+  padding: 0 10% 100px;
+  background-color: #ffffff;
+}
+.question h4::before,
+.question h4::after {
+  border-top: 1px solid black;
+  content: "";
+  width: 25%;
+  display: block;
+}
+.question h4 {
+  height: 100px;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.question > p {
+  margin-bottom: 70px;
+}
+.question-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.question-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 180px;
+  border: black 1px solid;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.question-item::before {
+  content: "";
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  border-top: 11px solid transparent;
+  border-right: 11px solid black;
+  border-bottom: 11px solid black;
+  border-left: 11px solid transparent;
+}
+.question-item:hover {
+  outline: black 3px solid;
+  transition: outline 70ms;
+}
+.question-item img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+/* フッター */
+footer {
+  color: white;
+  background-color: black;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+.footer-box {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
+  margin-bottom: 100px;
+}
+.footer-box > li {
+  border-right: 1px solid white;
+  padding: 0 20px;
+}
+.footer-box > li:last-child {
+  border: none;
+}
+footer p {
+  font-size: 12px;
+}
+/* ページトップ */
+.page-top {
+  position: fixed;
+  right: 30px;
+  bottom: 20px;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 1s;
+  pointer-events: none;
+}
+.page-top a {
+  
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
+  border: 1px white solid;
+}
+.page-top a:before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 17px;
+  border-bottom: 10px solid white;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+.page-top.active{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* レスポンシブ */
+
+@media (max-width: 960px) {
+  /* ヘッダー */
+  html {
+    font-size: 18px;
+  }
+  header {
+    padding: 0;
+    padding-right: 10px;
+    width: 100vw;
+    min-width: 100vw;
+    height: 70px;
+    position: fixed;
+    background-color: #ffffff;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-bottom: 0;
+    margin-left: 10px;
+  }
+  .logo-box img {
+    width: 40px;
+  }
+
+  .container {
+    position: relative;
+    max-width: 100%;
+    margin-left: 0;
+  }
+  /* サイドメニュー */
+  .nav-list {
+    top: 0;
+    left: -340px;
+    opacity: 0;
+    width: 230px;
+    height: 100vh;
+    position: fixed;
+    background-color: #ffffff;
+    padding-top: 50px;
+    padding-left: 40px;
+    transition: opacity 0.5s, left 0.5s;
+  }
+  .nav-list.active {
+    left: 0px;
+    opacity: 1;
+    z-index: 102;
+
+  }
+  /* 画面を暗く */
+  .bg-cover-on.active {
+    position: fixed;
+    top: 0;
+    z-index: 101;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  /* ハンバーガーメニュー */
+  .hamburger_menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    margin-right: 10px;
+    z-index: 102;
+  }
+  .hamburger {
+    display: block;
+    width: 48px;
+    height: 100%;
+    background-color: transparent;
+    border-color: transparent;
+    position: relative;
+    padding-bottom: 30px;
+  }
+  .hamburger span {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 1.5px;
+    background-color: black;
+    transition: top 0.4s, transform 0.4s, opacity 0.4s, color 0.4s;
+  }
+  .hamburger span:nth-child(1) {
+    top: 5px;
+  }
+
+  .hamburger span:nth-child(3) {
+    top: -5px;
+  }
+  /* ハンバーガーの動き */
+  .hamburger.active span:nth-child(1) {
+    top: 15px;
+    transform: rotate(405deg);
+    background-color: white;
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    top: -15px;
+    transform: rotate(-405deg);
+    background-color: white;
+  }
+
+  /* ハンバーガーここまで */
+  /* ビデオ */
+  #video {
+    position: fixed;
+    overflow: hidden;
+  }
+  #video video {
+    min-height: 100%;
+    min-height: 100vh;
+    min-width: 100%;
+    min-width: 100vw;
+  }
+  .main-container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+  .space {
+    width: 100%;
+    height: 100vh;
+  }
+  /* 建築 */
+  .architecture {
+    position: relative;
+    z-index: -1;
+    padding: 0 10%;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  }
+  .architecture h1::before,
+  .architecture h1::after {
+    border-top: 1px solid blanchedalmond;
+    content: "";
+    width: 20%;
+    display: block;
+  }
+  .architecture h1 {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .image-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 80px;
+  }
+
+  /* ここできてません */
+  .image-box li {
+    width: 95vw;
+    position: relative;
+    margin-bottom: 50px;
+    cursor: pointer;
+    border: 1px white solid;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, 0.5) inset;
+    overflow: hidden;
+  }
+  .image-box li::after {
+    position: absolute;
+    content: "PROJECT_01";
+    color: #ffffff;
+    font-size: 10px;
+    left: 5px;
+    bottom: 5px;
+  }
+
+  .image-box img {
+    position: relative;
+    width: 100%;
+    min-width: 100%;
+    z-index: -1;
+  }
+
+  /* house  */
+  .house {
+    padding: 0 10px 50px;
+    background-color: black;
+    opacity: 0.8;
+  }
+  .house h2::before,
+  .house h2::after {
+    border-top: 1px solid blanchedalmond;
+    content: "";
+    width: 20%;
+    display: block;
+  }
+  .house h2 {
+    height: 100px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .circle-box {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    text-align: center;
+  }
+  .circle-box div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28vw;
+    height: 28vw;
+    min-width: 70px;
+    min-height: 70px;
+    border: 1px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .circle-box div::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 17vw;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.6s;
+    left: 0;
+  }
+  .circle-box div:hover::before {
+    width: 17vw;
+  }
+  .circle-box p {
+    padding: 10px 0;
+  }
+
+  .flow {
+    padding: 0 10% 50px;
+    background-color: #ffffff;
+  }
+  .flow h3::before,
+  .flow h3::after {
+    border-top: 1px solid black;
+    content: "";
+    width: 15%;
+    display: block;
+  }
+  .flow h3 {
+    height: 100px;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .flow > p {
+    margin-bottom: 50px;
+  }
+  .flow-box-wrap {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .flow-left-wrap {
+    margin-bottom: 50px;
+  }
+  .flow-right-wrap {
+    display: flex;
+    margin-bottom: 70px;
+  }
+  .flow-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+  .flow-left-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    width: 100%;
+    min-width: 300px;
+    max-width: 300px;
+    height: 80px;
+    background-color: #414141;
+    color: white;
+    margin-bottom: 80px;
+  }
+  .flow-left-box::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0px;
+    top: 80px;
+    border-top: 50px solid #414141;
+    border-right: 150px solid transparent;
+    border-left: 150px solid transparent;
+    z-index: 2;
+  }
+  .flow-left-box::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 80px;
+    top: 80px;
+    background-color: #ffdd02;
+    z-index: 1;
+  }
+
+  .flow-middle-box p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 30px;
+    height: 30px;
+    background-color: #414141;
+    border-radius: 50%;
+  }
+  .flow-right-box p:first-child {
+    font-size: 25px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    /* padding-left: 20px; */
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  .flow-right-box p:last-child {
+    font-size: 18px;
+  }
+  #none::after {
+    display: none;
+  }
+  /* お問い合わせ */
+  .question {
+    padding: 0 10% 50px;
+    background-color: #ffffff;
+  }
+  .question h4::before,
+  .question h4::after {
+    border-top: 1px solid black;
+    content: "";
+    width: 20%;
+    display: block;
+  }
+  .question h4 {
+    height: 100px;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .question > p {
+    margin-bottom: 70px;
+  }
+  .question-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .question-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 200px;
+    min-width: 200px;
+    min-height: 200px;
+    border: black 1px solid;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  .question-item::before {
+    content: "";
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    border-top: 11px solid transparent;
+    border-right: 11px solid black;
+    border-bottom: 11px solid black;
+    border-left: 11px solid transparent;
+  }
+  .question-item:hover {
+    outline: black 3px solid;
+    transition: outline 70ms;
+  }
+  .question-item img {
+    width: 20vw;
+    margin-bottom: 10px;
+  }
+
+  /* フッター */
+  footer {
+    color: white;
+    background-color: black;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 0 10px; */
+  }
+  footer a {
+    color: white;
+    text-decoration: none;
+  }
+  .footer-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 50px;
+    margin-bottom: 100px;
+  }
+  .footer-box > li {
+    font-size: 15px;
+    border-right: 1px solid white;
+    padding: 0 15px;
+  }
+  .footer-box > li:last-child {
+    border: none;
+  }
+  /* ページトップ */
+  .page-top {
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+    z-index: 100;
+  }
+  .page-top a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    border: 1px white solid;
+  }
+  .page-top a:before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 17px;
+    border-bottom: 10px solid white;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+  }
+}
